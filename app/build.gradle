@@ -27,6 +27,23 @@ android {
         }
     }
 
+    signingConfigs {
+
+        //Env variables
+        /*storeFile file(System.getenv("KEYSTORE"))
+        storePassword System.getenv("KEYSTORE_PASSWORD")
+        keyAlias System.getenv("KEY_ALIAS")
+        keyPassword System.getenv("KEY_PASSWORD")*/
+
+        //CLI
+        /*release {
+            storeFile file(System.console().readLine("\n\$ Enter keystore path: "))
+            storePassword System.console().readPassword("\n\$ Enter keystore password: ")
+            keyAlias System.console().readLine("\n\$ Enter key alias: ")
+            keyPassword System.console().readPassword("\n\$ Enter key password: ")
+        }*/
+    }
+
     // If you need to add more flavors, consider using flavor dimensions.
     productFlavors {
         mock {
